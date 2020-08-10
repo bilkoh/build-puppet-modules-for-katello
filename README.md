@@ -8,3 +8,7 @@ The <strong>name</strong> is the file name, the  <strong>checksum</strong> is SH
 Having this knowledge, we can build Puppet modules manually, generate a Pulp manifest and import everything in to Katello.
 # Katello Separate Lifecycle for Puppet Modules
 https://www.lisenet.com/2018/katello-separate-lifecycle-for-puppet-modules/
+
+
+# bilk0h's fork
+The guide on Lisenet was designed was designed for puppet 5.x but I was running 6.16.0. Puppet 6.x uses `pdk build` instead of `puppet module build`. If anyone else following the guide was in my position, this will work for you instead.
