@@ -33,10 +33,11 @@ MOD_ARRAY="$(ls -d "$MOD_DIR"/*/)";
 for module in ${MOD_ARRAY[*]};do
 
   echo -e "\n$module";
-  puppet module build "$module"
+  cd $module;
+  pdk build;
 
-  if [ -d "$module"/pkg/ ]; then
-    cd "$module"/pkg/;
+  if [ -d pkg ]; then
+    cd pkg;
     MOD_ARCHIVE="$(ls *tar.gz)";
 
     echo "Copying archive "$MOD_ARCHIVE".";
